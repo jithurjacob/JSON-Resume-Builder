@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+</head>
+<body>
+<a href="/new" target="_blank">Create new Resume</a>
+<br>
+<br>
+<br>
+<br>
+Saved Resumes
+<br>
+{% for file in data %}
+<a href="/view/{{file}}" target="_blank">{{file}}</a>
+{% endfor %}
+</body>
+</html>
