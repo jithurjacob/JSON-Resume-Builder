@@ -40,7 +40,7 @@ def new():
     return make_response(render_template('new.html'),200)
 @app.route('/')
 def index():
-        print "hi"
+        #print "hi"
         #headers = {'Content-Type': 'text/html'}
         #conn = sqlite3.connect('data.db', timeout=1)
         #query="select (select count(s.id) from students s) as total,(select count(s.id) from students s where  s.status='Unknown') as unknown,(select count(s.id) from students s where s.status='Waiting') as waiting,(select count(s.id) from students s where  s.status='Joined') as joined,(select count(s.id) from students s where  s.status='NotJoining') as notjoining "
