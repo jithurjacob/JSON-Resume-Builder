@@ -1,7 +1,7 @@
 from flask import Flask,make_response,render_template, request, jsonify, json
 import os,json
 #import sqlite3
-
+port = os.getenv('VCAP_APP_PORT', '5000')
 #port = int(os.getenv('PORT', 8000))
 
 app = Flask(__name__)
@@ -53,4 +53,4 @@ def index():
         return make_response(render_template('index.html',data=saved),200)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=int(port))
